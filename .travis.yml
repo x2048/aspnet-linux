@@ -14,6 +14,7 @@ script:
     - dotnet build
     - dotnet publish -o output
     - cd output
-    - git commit -am "Build"
-    - git push origin
+    - git add .
+    - git commit -m "Build"
+    - git push origin +master:master
     
