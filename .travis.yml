@@ -7,6 +7,8 @@ install:
     - sudo apt-get update
     - sudo apt-get install dotnet-dev-1.0.0-preview2.1-003177
     - git clone $AZURE_REPO output
+    - sudo npm install -g bower
+    - sudo npm install -g gulp
 script:
     - dotnet restore
     - dotnet build
