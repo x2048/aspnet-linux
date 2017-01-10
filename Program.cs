@@ -11,13 +11,18 @@ namespace WebApplication
     {
         public static void Main(string[] args)
         {
-            var host = new WebHostBuilder()
+            var builder = new WebHostBuilder()
                 .UseKestrel()
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()
-                .UseStartup<Startup>()
-                .UseUrls("http://0.0.0.0:8080")
-                .Build();
+                .UseStartup<Startup>();
+                
+            if (args.Contains("c9"))
+            {
+                builder = builder.UseUrls("http://0.0.0.0:8080");
+            }
+            
+            var host = builder.Build();
 
             host.Run();
         }
