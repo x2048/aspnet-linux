@@ -11,19 +11,15 @@ namespace WebApplication
     {
         public static void Main(string[] args)
         {
-            var builder = new WebHostBuilder()
+            var port = System.Environment.GetEnvironmentVariable("PORT") ?? "5000";
+            var host = new WebHostBuilder()
                 .UseKestrel()
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()
-                .UseStartup<Startup>();
+                .UseStartup<Startup>()
+                .UseUrls("http://0.0.0.0:" + port + "/")
+                .Build();
                 
-            if (args.Contains("c9"))
-            {
-                builder = builder.UseUrls("http://0.0.0.0:8080");
-            }
-            
-            var host = builder.Build();
-
             host.Run();
         }
     }
