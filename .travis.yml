@@ -14,4 +14,4 @@ script:
 - dotnet restore
 - dotnet build
 - dotnet publish -o output
-- lftp -u aspnet-linux\\\$aspnet-linux,$FTP_KEY waws-prod-am2-085.ftp.azurewebsites.windows.net -c "mirror -R --delete-first output /site/wwwroot"
+- echo "mirror -R --delete-first output /site/wwwroot" | lftp -u aspnet-linux\\\$aspnet-linux,$FTP_KEY waws-prod-am2-085.ftp.azurewebsites.windows.net 
