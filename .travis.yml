@@ -6,7 +6,7 @@ install:
   trusty main" > /etc/apt/sources.list.d/dotnetdev.list'
 - sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 417A0893
 - sudo apt-get update
-- sudo apt-get install dotnet-dev-1.0.0-preview2.1-003177
+- sudo apt-get install dotnet-dev-1.0.0-preview2.1-003177 lftp
 - nvm use 4.1.2
 - npm install -g bower
 - npm install -g gulp
