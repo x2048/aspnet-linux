@@ -1,3 +1,5 @@
 #!/bin/sh
 
-exec ssh -i `basename $0`/id_rsa "$@"
+BASE=$PWD/`dirname "$0"`
+
+exec ssh -i "$BASE/id_rsa" "$@"
