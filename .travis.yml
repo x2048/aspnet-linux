@@ -16,4 +16,4 @@ script:
 - dotnet restore
 - dotnet build
 - dotnet publish -o output
-- docker build aspnet-linux
+- docker build -t aspnet-linux
