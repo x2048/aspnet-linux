@@ -16,4 +16,8 @@ script:
 - dotnet restore
 - dotnet build
 - dotnet publish -o output
-- docker build -t aspnet-linux
+- docker build -t bis0n/aspnet-linux:latest .
+- sudo docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+- sudo docker push bis0n/aspnet-linux:latest
+DOCKER_USERNAME=bis0n:
+  secure: XzdYd+g4eWyEO6zLYJ0zs1rfG/0bKf0MkGHvvBurs6aLf3SwT7+TiSbf9GudSyRsuTJb89SIuXXkUh9CmpGFwp9xkBQ24HAkhdDwFgqRWk0ba7jUgrO/38EHo5fjIRvRtjZuQA5KoQjnwj35vu68p+o2H7wgrvyU7zmJo3BRlhsLK5yaFEuFSG5zzGgY21w/qefTNOapxwFfRoXNoyh3LEiZsKq1wmAvZwL252St06rLQ1vDqCRpWezgT7UEC8KWuO+N/dDr0OFCQoCvzBCUeq4CVPL19qwMH/W9Uv14OU7SATGXGNfc1OPs7UmaRCIUE+adbDsh/C7VcRnkm79xGIpLbFskFAvXV2ARkI6Bo7H6teoqiTDAoVmPMJsrLAWhfmB/Qz8ruxm30mOhpP/y8glBjEdkF5JcpnkbIoNtkxSV5BqcgYMnLS/AtQB26ezNeanJ2TAk9hRydqOlLY65Qo2K8CdeiTkLRbljmywOAW55sNKc7PsjmpWCCrlYALy1ojysLFps6tn5wOKgs7uPXLf4RJKpFjKZUN9gw/NcpJPZDT0LFEapVaoGtbzlvi3j5NTtJid+hBRrENba93mEHpJas1f3hEHbC1M4JKpXjI9TSOyErYSYvZq9pKRv4rzDUULW/gL/BtemCBacCzUjNu/FFa7Hz5GbX9Obxy95Kf4=
