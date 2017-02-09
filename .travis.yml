@@ -16,8 +16,8 @@ script:
 - dotnet restore
 - dotnet build
 - dotnet publish -o output
-- docker build -t bis0n/aspnet-linux:latest .
-- docker login -u bis0n -p $DOCKER_PASSWORD
-- docker push bis0n/aspnet-linux:latest
+- docker build -t x2048/aspnet-linux:latest .
+- docker login -u x2048 -p $DOCKER_PASSWORD
+- docker push x2048/aspnet-linux:latest
 env:
 - secure: "SCT/nZvKzYI+ZCydVw4dXl2cHDrbRufhmeN4DMe4hDX6drlyyLzi/kKp68xPzJYDcBZUf7LXtBDlSLAwNx6vgdHNh0RMsxgf9dDclvyAWfxu5p+ybtuyHwBJM7ozSL8zFE6qxZKlXTfLmGauXLMWpTDd3RVzBV+7e4Xh2ukB5AZxwS/8I6fzv4hyAmOnMgepZTlbJ/q/4OgODSpYkw6KGMSl/FLryTrJcedvca/Xyil7yL0VSdgJCVnuWxrY6eiMnJNQ3gZzuKApOV2rZYCGIA7YvKC/0qezIAcNL42mjXr3++RyQ6oSXr13BpfJoD7W2VE53cfZ/fpqypEair9vEYFTtuD7uhFvq01owPLvEUF9t9NECH1r1R9jRiYPJmV2P6009J8zH2vlqQvA6i+2c/uphGTHbSvhneH72K4Kyn7vSlsvEXPmVLoM+Y3peev671bzx+ibWRtgZMD9vYifcqYPDH7CWoFD9WE9m3V6VYJl8Ce5FmwL4irqXUkgcT+4ISv1S5tMeXzCPlP9Qt0+9kPpphPNIM8bMQ5aJel69bUuJCPX6kJcCjZ1CI8/wdvCVDFyJ89U2J03yna1TK7VNvp3HEn/bEZIlRMRxGjjSPDCMxmJve9AUJoYXkdP0u5SE0B2KB/0+n/Sj6vX29O+Xu1oLpryLVtKToMuzGtSnC8="
